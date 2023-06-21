@@ -67,12 +67,15 @@ exports.signUpUser = async (req, res) => {
     const body = req.body
     const _id = new mongoose.Types.ObjectId();
 
+    console.log("body", body)
+
     try {
         const users = await Users.findOne({ email: body.email })
 
         if (users != null) {
             return res.status(400).json("Email already exists!")
         }
+        
         else if (users == null) {
             const newUser = new Users({
                 _id: _id,

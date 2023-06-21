@@ -10,6 +10,7 @@ import Home from "./views/home";
 import About from "./views/about";
 import Footer from "./components/footer";
 import UserList from './views/user/list';
+import CreateUser from './views/user/create';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="about/*" element={<About />} />
           <Route path="user/list" element={<UserList />} />
+          <Route path="user/create" element={<CreateUser />} />
         </Routes>
 
         <Footer/>
